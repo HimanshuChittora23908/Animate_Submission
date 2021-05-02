@@ -56,170 +56,18 @@ II. <=================Tools Used======================>
 
 III. <==================Approach===============>
 
-1. First thing data is quite resembles the churdataset so I just gave it a first try 
-and achieved 88.5714 % on test set that has been evaluated on Tech Gig Evaluation Process.
+A. After hours of brainstorming and implementing 3 ideas we finally liked this idea a lot as depression and anxiety was there in India from the very past and no have become a thing to ponder upon as in Covid Situautions it is increasing at an exonential rate.
 
-2. Dataset has includes 56 columns and 965 rows in Trainning Data.csv file
-
-The columns that are present in are : 
-
-clientid_cr
-clmbuserid_cr
-conversiontime_cr
-imprid_cr
-adslotdimid_cr
-algo_cr
-audiences_cr
-clickbid_cr
-geodimid_cr
-ip_cr
-itemcolumbiaid_cr
-itemid_cr
-position_cr
-pubclientid_cr
-refurl_cr
-siteId_cr
-templateid_cr
-goalid_cr
-time_cr
-adLogType_cr
-v_cr
-allAudiences_cr
-pricingtype_cr
-osId_cr
-browserId_cr
-cityId_cr
-stateId_cr
-modelDimId_cr
-lookUpFrom_cr
-connTypeDimId_cr
-ispDimId_cr
-countryDimId_cr
-goalTypeId_cr
-conversionDurationInMillis_cr
-impressionTimeInMillis_cr
-clickTimeInMillis_cr
-osVerDimId_cr
-uuidSource_cr
-geoGrpDimId_cr
-stateGrpDimId_cr
-deviceId_cr
-uvh_cr
-uv_cr
-platformId_cr
-sdkVersion_cr
-usrClusterId_cr
-cityGrpDimId_cr
-siteClusterIds_cr
-refClusterId_cr
-paid_cr
-spend_cr
-attributionType_cr
-conversionid_cr
-optimize_on_cr
-bundleId_cr
-conversion_fraud
-
-3. But there are some redundant columns that are not required as I tested it before training the data. The columns which includes user id and record id and etc, do not affect the performance of the model as these are values that are randomly given to the users.
-
-The columns that I used are - 
-
-clientid_cr
-conversiontime_cr
-adslotdimid_cr
-algo_cr
-clickbid_cr
-geodimid_cr
-itemcolumbiaid_cr
-itemid_cr
-position_cr
-pubclientid_cr
-siteId_cr
-templateid_cr
-goalid_cr
-time_cr
-adLogType_cr
-v_cr
-pricingtype_cr
-osId_cr
-browserId_cr
-cityId_cr
-stateId_cr
-modelDimId_cr
-lookUpFrom_cr
-connTypeDimId_cr
-ispDimId_cr
-countryDimId_cr
-goalTypeId_cr
-conversionDurationInMillis_cr
-impressionTimeInMillis_cr
-clickTimeInMillis_cr
-osVerDimId_cr
-uuidSource_cr
-geoGrpDimId_cr
-stateGrpDimId_cr
-deviceId_cr
-uvh_cr
-uv_cr
-platformId_cr
-usrClusterId_cr
-cityGrpDimId_cr
-siteClusterIds_cr
-refClusterId_cr
-paid_cr
-spend_cr
-attributionType_cr
-optimize_on_cr
-conversion_fraud
-
-IV. <===============Feature Engineering======>
-
-1. Dealing with the numbers that have redundant character like "," ".", etc.
-
-To deal with these unwanted character and to preserve the data, I used python concept that first replace these character with empty string and then converts them to float values so as to use in the dataset.
-
-To achieve above below is the Pseudo Code - 
-
-data = pandas.read_csv('training data.csv')
-
-data[column_name]=data[column_name].str.replace(",","").astype(float);
-
-
-5. Dealing with Missing Values in the Dataset
-
-To achieve we can use the technique in Data Science which is called imputation. 
-This technique states that the missing values in any dataset can be converted to the mean of all values in that particular column.
-
-Scikit Learn provides the in-built class to do this tedious task.
-
-Create an instance of impute class and fit it to the dataset
-
-Below is the Pseudo Code - 
-imputer = SimpleImputer(missing_values=np.nan, strategy='mean', verbose=0)
-
-X = imputer.fit_transform(X)
-
-
-6. Feature Scaling
-
-As the values in the dataset ranges from 1000s to 1000000s so they are not in a similar range.
-So to train our model we need to make them in same range lets say between 0 to 1.
-
-This can be done from StandarScaler() class provided by Scikit Learn .
-
-Below is the Pseudo Code - 
-
-fs = StandardScaler()
-X = fs.fit_transform(X)
-
-7. Label Encoding 
-
-Since our test labels has true and false so we need to convert it to 0 and 1 so as to feed the model
-
-V. <===============Making the Model=========>
-
-I have used here the state-of-the-art, Random Forest Classifier with 300 trees in the forest.
-
-After training the model on our dataset, we predict the model on test set and it evaluates around 88.424%.
-
-
+B. After finalizing the topic and idea we started working on it as stated below. 
+1. Firstly, made room and objects of room in blender.
+2. Then took the character rain2.0v from blender cloud.
+3. Set up her pose with a pen showing drawing a line.
+4. Then made a pose of her sleeping on a bed.
+5. Animating both of them gave me frames which I made a video using Adobe premier pro.
+6. Next I made a building with the girl on top and adjusted her pose like she is doing a suicide due to depression and anxiety.
+7. Next I animated the flower blooming sequence again on blender to give a sort of realistic look.
+8. Then made her go back after seeing the flower scene.
+9. Next I compiled all the frames I got in Adobe Premiere Pro 
+10. Then I moved to After Effects to arrange their sequence and insert some transitions.
+11. Also added sound eefcts from various royality free and licenced sources(credits have been mentioned above)
+12. Rendered the complete video on Adobe Media Encoder to present to you all.  
